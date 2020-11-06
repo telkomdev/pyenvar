@@ -15,7 +15,7 @@ RE_KEY_VAL = '^\s*([\w.-]+)\s*=\s*(.*)?\s*$'
 
 SRC_MUST_BE_IO_OR_STRING_ERROR = 'src must be IO or string'
 
-class PenvyException(Exception):
+class pyenvarException(Exception):
     pass
 
 '''

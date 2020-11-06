@@ -1,10 +1,10 @@
-## Penvy
+## pyenvar
 
 Python's `.env` loader
 
 ### Install
 ```shell
-$ pip install penvy
+$ pip install pyenvar
 ```
 
 ### Unit test
@@ -32,9 +32,9 @@ PASSWORD='12345'
 #### Basic usage
 ```python
 import os
-import penvy
+import pyenvar
 
-penvy.load()
+pyenvar.load()
 print(os.environ.keys())
 username = os.environ.get('USERNAME')
 print(username)
@@ -44,9 +44,9 @@ print(username)
 
 ```python
 import os
-import penvy
+import pyenvar
 
-penvy.load(path='./config/.env', encoding='utf-8')
+pyenvar.load(path='./config/.env', encoding='utf-8')
 print(os.environ.keys())
 username = os.environ.get('USERNAME')
 print(username)
