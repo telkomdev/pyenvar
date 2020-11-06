@@ -6,7 +6,7 @@ import re
 
 logging.basicConfig(level=logging.INFO)
 
-__version__ = '1.0.1'
+__version__ = '1.0.5'
 
 VERSION = tuple([int(v) for v in __version__.split('.')])
 
