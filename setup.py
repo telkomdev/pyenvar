@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 from setuptools import setup, find_packages
-import pyenvar
 import pathlib
 
 HERE = pathlib.Path(__file__).parent.resolve()
@@ -11,7 +10,7 @@ long_description = (HERE / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='pyenvar', 
-    version=pyenvar.__version__,
+    version='1.0.1',
     description='.env loader for python',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -21,7 +20,7 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'Topic :: OS :: config :: environment :: env variable',
+        'Environment :: Console',
 
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
