@@ -2,6 +2,16 @@
 
 Python's `.env` loader
 
+### Install
+```shell
+$ pip install penvy
+```
+
+### Unit test
+```shell
+$ python -m unittest
+```
+
 ### Usage
 
 Make sure the `.env` file is in your project's `root` folder
