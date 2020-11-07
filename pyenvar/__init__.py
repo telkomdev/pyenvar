@@ -15,7 +15,7 @@ RE_KEY_VAL = '^\s*([\w.-]+)\s*=\s*(.*)?\s*$'
 
 SRC_MUST_BE_IO_OR_STRING_ERROR = 'src must be IO or string'
 
-class pyenvarException(Exception):
+class PyenvarException(Exception):
     pass
 
 '''
@@ -72,6 +72,6 @@ def load(**kwargs):
         if key not in os.environ.keys():
             os.environ[key] = val
         else:
-            logging.info('key {0} already defined')
+            logging.info('key {0} already defined'.format(key))
     dotenv_content.close()
     return envs
