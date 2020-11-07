@@ -30,7 +30,7 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3 :: Only',
     ],
-    keywords='env variable, .env, config',
+    keywords='env variable, .env, config, dotenv',
     packages=find_packages(exclude=['tests*']),
     python_requires='>=3.5',
     project_urls={

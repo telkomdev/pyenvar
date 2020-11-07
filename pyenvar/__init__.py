@@ -36,7 +36,7 @@ def parse(src):
             key = key_val_list[0]
             val = key_val_list[1] or ''
 
-            # calculate variable len without last character
+            # calculate variable len without the last character
             end = len(val) - 1
 
             # determine if val uses single quote
@@ -49,6 +49,7 @@ def parse(src):
             else:
                 # remove whitespace
                 val = val.strip()
+            # store val into envs object
             envs[key] = val
     return envs
 
@@ -59,6 +60,8 @@ def load(**kwargs):
     logging.info('load env.....')
     envs = {}
     encoding = 'utf-8'
+
+    # get current working directory
     cwd = pathlib.Path.cwd()
     dotenv_path = pathlib.Path.joinpath(cwd, '.env')
     if 'path' in kwargs:
