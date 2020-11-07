@@ -6,7 +6,7 @@ import re
 
 logging.basicConfig(level=logging.INFO)
 
-__version__ = '1.0.5'
+__version__ = '1.0.6'
 
 VERSION = tuple([int(v) for v in __version__.split('.')])
 
@@ -57,6 +57,7 @@ load .env file and parse into environment variables
 '''
 def load(**kwargs):
     logging.info('load env.....')
+    envs = {}
     encoding = 'utf-8'
     cwd = pathlib.Path.cwd()
     dotenv_path = pathlib.Path.joinpath(cwd, '.env')
@@ -65,13 +66,12 @@ def load(**kwargs):
     if 'encoding' in kwargs:
         encoding = kwargs.get('encoding')
 
-    dotenv_content = open(dotenv_path, 'r', encoding=encoding)
-    envs = parse(dotenv_content)
-    
-    for key, val in envs.items(): 
-        if key not in os.environ.keys():
-            os.environ[key] = val
-        else:
-            logging.info('key {0} already defined'.format(key))
-    dotenv_content.close()
+    with open(dotenv_path, 'r', encoding=encoding) as dotenv_content:
+        envs = parse(dotenv_content)
+        
+        for key, val in envs.items(): 
+            if key not in os.environ.keys():
+                os.environ[key] = val
+            else:
+                logging.info('key {0} already defined'.format(key))
     return envs
