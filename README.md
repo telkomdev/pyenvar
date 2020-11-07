@@ -1,5 +1,10 @@
 ## pyenvar
 
+#
+[![Build Status](https://travis-ci.org/wuriyanto48/pyenvar.svg?branch=master)](https://travis-ci.org/wuriyanto48/pyenvar)
+
+
+
 Python's `.env` loader
 
 ### Install
