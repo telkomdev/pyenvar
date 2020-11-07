@@ -11,8 +11,9 @@ $ pip install pyenvar
 ```
 
 ### Unit test
+Make sure to running `unit tests` before pushing
 ```shell
-$ python -m unittest
+$ make test
 ```
 
 ### Usage
