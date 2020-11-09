@@ -10,7 +10,7 @@ long_description = (HERE / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='pyenvar', 
-    version='1.0.7',
+    version='1.0.6',
     description='.env loader for python',
     long_description=long_description,
     long_description_content_type='text/markdown',
