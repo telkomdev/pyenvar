@@ -10,7 +10,7 @@ long_description = (HERE / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='pyenvar', 
-    version='1.0.6',
+    version='1.0.7',
     description='.env loader for python',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -33,6 +33,7 @@ setup(
     keywords='env variable, .env, config, dotenv',
     packages=find_packages(exclude=['tests*']),
     python_requires='>=3.5',
+    scripts=['bin/pyenvar-cli'],
     project_urls={
         'Bug Reports': 'https://github.com/wuriyanto48/pyenvar/issues',
         'Source': 'https://github.com/wuriyanto48/pyenvar/',
