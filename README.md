@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/wuriyanto48/pyenvar.svg?branch=master)](https://travis-ci.org/wuriyanto48/pyenvar)
 
 
-Python's `.env` is a loader based on https://github.com/motdotla/dotenv (`dotenv` module for `nodejs`) with zero dependency
+Python's `.env` loader is a dotenv package for `Python` based on https://github.com/motdotla/dotenv (`dotenv` module for `nodejs`) with zero dependency
 
 ### Install
 ```shell
