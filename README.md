@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/wuriyanto48/pyenvar.svg?branch=master)](https://travis-ci.org/wuriyanto48/pyenvar)
 
 
-Python's `.env` loader
+Python's `.env` is a loader based on https://github.com/motdotla/dotenv (`dotenv` module for `nodejs`) with zero dependency
 
 ### Install
 ```shell
@@ -54,4 +54,9 @@ pyenvar.load(path='./config/.env', encoding='utf-8')
 print(os.environ.keys())
 username = os.environ.get('USERNAME')
 print(username)
+```
+
+#### Pyenvar CLI
+```shell
+$ pyenvar-cli /path/to/.env
 ```
